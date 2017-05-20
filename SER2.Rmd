@@ -1,0 +1,85 @@
+---
+title: "Dashboard do SER 2"
+author: "Steven Dutt Ross"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    social: menu
+
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+data(mtcars)
+mtcars$vs <-as.factor(mtcars$vs)
+mtcars$am<-as.factor(mtcars$am)
+```
+
+MTCARS
+=======================================================================
+
+Row
+-----------------------------------------------------------------------
+
+### AM
+
+```{r}
+barplot(table(mtcars$am),col="red")
+```
+
+
+### VS 
+
+```{r}
+barplot(table(mtcars$vs),col="blue")
+```
+
+Row
+-----------------------------------------------------------------------
+
+### Diagrama de Dispersão 
+
+```{r}
+scatter.smooth(mtcars$mpg,mtcars$hp,col="red",pch=19)
+```
+
+### Histograma
+
+```{r}
+hist(mtcars$wt,col="darkred")
+```
+
+Outros
+=======================================================================
+
+Row
+-----------------------------------------------------------------------
+
+### Box Plot por AM
+
+```{r}
+boxplot(mtcars$disp~mtcars$am,col=c("darkred","royalblue"))
+```
+
+### Box Plot por VS
+
+```{r}
+boxplot(mtcars$disp~mtcars$vs,col=c("darkgreen","yellow2"))
+```
+
+Row
+-----------------------------------------------------------------------
+
+### Pizza VS
+
+```{r}
+pie(table(mtcars$vs),col=c("red","blue"))
+```
+
+### Pizza AM
+
+```{r}
+pie(table(mtcars$am),col=c("darkgreen","yellow2"))
+```
+
+
