@@ -1,0 +1,269 @@
+---
+title: "Dashboard de Game of Thrones com o R"
+output: 
+  flexdashboard::flex_dashboard:
+    storyboard: true
+    social: menu
+    source: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+
+```
+
+### GAME OF THRONES é uma série baseada na série de livros A Song of Ice and Fire, de George R. R. Martin.
+
+```{r ,echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG("imagem/logo(1).png")
+grid.raster(img)
+
+```
+
+
+***
+
+II Seminário Internacional de Estatística com R
+The World of Big Data Analysis
+
+http://www.ser.uff.br/ 
+
+
+Desenvolvimento de Dashboards interativos com o R
+
+
+prof. Steven Dutt-Ross UNIRIO
+http://gae.uniriotec.br/
+
+
+Todo o material da apresentação está disponível em:
+https://github.com/DATAUNIRIO/SER2
+
+### OS SETE REINOS DE GAME OF THRONES.
+
+```{r ,echo=FALSE}
+library(png)
+library(grid)
+img8 <- readPNG("imagem/GOT.png")
+grid.raster(img8)
+
+```
+
+
+***
+
+OS SETE REINOS DE GAME OF THRONES
+
+- Os Sete Reinos tem suas origens na Guerra da Conquista, quando o valiriano Aegon I invadiu Westeros com seus dragões, conquistando seis das sete nações independentes e consolidando-os sob o governo único da Casa Targaryen. Cada reino, por sua vez, é governado por um alto lord que responde diretamente e apenas ao Rei. Antes da Conquista estes reinos eram:
+
+- O Norte, governado pela **Casa Stark** como Reis do Inverno.
+
+- O Vale, governado pela **Casa Arryn** como Reis da Montanha e do Vale.
+
+- As Terras da Tempestade, governadas pelos Reis da Tempestade.
+
+- A Campina, governada pela extinta Casa Gardener.
+
+- Terras do Oeste, governada pela **Casa Lannister** como Reis do Rochedo.
+
+- As Ilhas de Ferro e as Terras dos Rios, governadas pela extinta Casa Hoare.
+
+- Fonte: http://www.gameofthronesbr.com/2011/05/game-of-thrones-para-novatos.html#ixzz4hi2DA4BX
+
+
+
+
+### A MURALHA (THE WALL). 
+
+```{r ,echo=FALSE}
+library(png)
+library(grid)
+img2 <- readPNG("imagem/wall.png")
+grid.raster(img2)
+
+```
+
+
+
+***
+
+A MURALHA (THE WALL)
+
+> "Winter is coming"
+
+> "O inverno está chegando."
+
+- A Muralha é uma parede de gelo maciço na fronteira norte de Westeros. 
+
+- A Muralha é defendida pela Patrulha da Noite (Night’s Watch). 
+
+- A patrulha é uma organização cujo objetivo é defender a Muralha.
+
+
+### A GUERRA DOS CINCO REIS.
+
+```{r ,echo=FALSE}
+library(png)
+library(grid)
+img3 <- readPNG("imagem/cincoreinos.png")
+grid.raster(img3)
+
+```
+
+***
+
+> "A Lannister always pays his debts” 
+
+> "Um lannister sempre paga suas dívidas"
+
+A GUERRA DOS CINCO REIS
+
+A Guerra dos Cinco Reis foi um grande conflito, travado em diversas frentes de batalha nos Sete Reinos. 
+
+- Cinco reis foram coroados durante a guerra.
+
+- **Joffrey Baratheon, Stannis Baratheon e Renly Baratheon** reivindicavam o Trono de Ferro.
+
+- Os separatistas **Robb Stark** e **Balon Greyjoy** sendo proclamados, respectivamente, Rei do Norte e Rei das Ilhas de Ferro.
+
+
+### QUEM É A MÃE DE JON SNOW?
+
+```{r ,echo=FALSE}
+library(png)
+library(grid)
+img4 <- readPNG("imagem/jonsnow.png")
+grid.raster(img4)
+
+```
+
+***
+
+> "You know nothing Jon Snow” 
+
+> “Você não sabe de nada, Jon Snow”
+
+QUEM É A MÃE DE JON SNOW?
+
+Existiam muitas teorias sobre a mãe de Jon Snow.....
+
+
+Hoje sabemos quem é a mãe de Jon Snow. 
+
+
+Mas claro que não vou dizer quem é
+
+(SPOILERS para aqueles que ainda não assistiram a série).
+
+
+### MAPA DE WESTEROS.
+
+```{r ,echo=FALSE}
+library(png)
+library(grid)
+img5 <- readPNG("imagem/map01.png")
+grid.raster(img5)
+
+```
+
+***
+
+MAPA DE WESTEROS
+
+A história de As Crônicas de Gelo e Fogo se passa em Westeros, que é um dos quatro continentes conhecidos no mundo. A maior parte de sua área equivale aos Sete Reinos. 
+
+Os outros dois continentes conhecidos são Essos, um vasto continente localizado a leste, atravessando o Mar Estreito, e Sothoryos, um continente inexplorado a sudeste de Westeros atravessando o Mar de Verão. 
+
+As nações mais próximas de Westeros são as Cidades Livres, um grupo de cidades-estado independentes ao longo da borda ocidental de Essos. 
+
+[Mapa de Westeros](https://quartermaester.info/)
+
+
+### ESTATÍSTICAS DE SOBREVIVÊNCIA EM WESTEROS
+
+```{r ,echo=FALSE}
+library(png)
+library(grid)
+img6 <- readPNG("imagem/NedRobertRhaegar.png")
+grid.raster(img6)
+
+```
+
+***
+
+> Valar Morghulis
+
+
+Um Manual Estatístico de Game Of Thrones
+
+Quero respostas para duas perguntas:
+
+- Quem vive mais? Um Stark, um Targaryen, ou um Baratheon?
+
+- Pensando em sua sobrevivência, o que Jon Snow deveria fazer? Ficar na patrulha da noite ou voltar para a Casa Stark?
+
+Banco de dados: Todos os dados (idade, sexo e afiliação) foram obtidos a partir de uma combinação de dois sites Game of Thrones Wiki e A Wiki of Ice and Fire.
+
+Método utilizado: Análise de Sobrevivência
+
+
+### VALAR MORGHULIS
+
+```{r ,echo=FALSE}
+library(png)
+library(grid)
+img7 <- readPNG("imagem/casas.png")
+grid.raster(img7)
+
+```
+
+***
+
+> Valar Morghulis: todos os homens devem morrer
+
+Um Manual Estatístico de Game Of Thrones
+
+- Quem vive mais? Um Stark, um Targaryen, ou um Baratheon?
+
+UMA RESPOSTA DIRETA !
+
+TANTO FAZ! MORRE MUITAS PESSOAS DE TODAS AS CASAS!
+
+
+
+### VALAR DOHAERIS
+
+```{r ,echo=FALSE}
+library(png)
+library(grid)
+img7 <- readPNG("imagem/dilema.png")
+grid.raster(img7)
+
+```
+
+***
+
+> Valar Dohaeris: todos os homens devem servir
+
+Um Manual Estatístico de Game Of Thrones
+
+- Pensando em sua sobrevivência, o que Jon Snow deveria fazer? Ficar na patrulha da noite ou voltar para a Casa Stark?
+
+A RESPOSTA:
+
+COM QUAL IDADE?
+
+ATÉ OS 27 ANOS JON SNOW DEVIA FICAR NA PATRULHA DA NOITE. 
+
+SE ELE TEM MAIS DO QUE 65 ANOS DEVIA FICAR NA CASA STARK!
+
+todavia, precisamos calcular o intervalo de confiança antes de chegar a uma concluir.
+
+Fonte:
+http://deadspin.com/valar-morghulis-a-statistical-guide-to-deaths-in-game-1618282560
+
+http://nerdist.com/statistically-game-of-thrones-westeros-has-the-survival-rate-of-a-warzone/
+
+
